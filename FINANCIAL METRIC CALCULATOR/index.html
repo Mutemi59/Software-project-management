@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="investmentForm">
+            <h3 class="heading">Investment Calculator</h3>
+            <div id="yearContainer">
+                <div class="input-group">
+                    <label for="cashFlow0">Year 0</label>
+                    <input type="number" class="cashFlow" id="cashFlow0" placeholder="-1000" required>
+                </div>
+                <div class="input-group">
+                    <label for="cashFlow1">Year 1</label>
+                    <input type="number" class="cashFlow" id="cashFlow1" placeholder="200" required>
+                </div>
+                <div class="input-group">
+                    <label for="cashFlow2">Year 2</label>
+                    <input type="number" class="cashFlow" id="cashFlow2" placeholder="300"required>
+                </div>
+            </div>
+            <div class="yearBtns">
+                <button type="button" id="removeYear" onclick="removeAyear()">Remove Year</button>
+                <button type="button" id="addYear" onclick="addAyear()">Add Year</button>
+            </div>
+            <button type="submit" id="submit">Calculate</button>
+        </form>
+        <div id="result">
+            <h3 class="heading">Outcome</h3>
+            <div class="result-group">
+                <p>Total Profit</p>
+                <h3 class="display_output" id="totalProfit">0.0</h3>
+            </div>
+            <div class="result-group">
+                <p>Total Expenses</p>
+                <h3 class="display_output" id="totalExpenses">0.0</h3>
+            </div>
+            <div class="result-group">
+                <p>Payback Period</p>
+                <h3 class="display_output" id="paybackPeriod">0</h3>
+            </div>
+            <div class="result-group">
+                <p>Rate Of Investment(ROI)</p>
+                <h3 class="display_output" id="ROI">0.0<span>%</span></h3>
+            </div>
+            <div class="result-group">
+                <p>Internal Rate of Return(IRR)</p>
+                <h3 class="display_output" id="IRR">0.0<span>%</span></h3>
+            </div>    
+            <div class="result-group">
+                <p>Net Present Value(NPV)</p>
+                <h3 class="display_output" id="NPV">0.0</h3>
+            </div> 
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
